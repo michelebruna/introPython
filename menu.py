@@ -5,6 +5,7 @@
 # 3 - Métodos e funções (executam alguma ação. Se só faz e fica quietinho, é um método. Se tem retorno, é uma função)
 # def (definition ou definição é um método ou função, não distingue os dois)
 
+
 def print_hi(name):
     print(f'Hi, {name}') # f'' significa format, ele entende que o que está entre chaves é uma variável. Observado na
   #  versão 3 do Python para frente
@@ -43,33 +44,45 @@ def brincar_de_plim(fim):
         else:
             print('{:0>3}'.format(numero))
 
+def sair():
+    print('Obrigada e Volte Sempre')
+
+
+def exibir_menu(argumento):
+    opcao = {
+        1: print_hi('Michele'),
+        2: calcular_area_do_retangulo(8, 9),
+        3: calcular_area_do_quadrado(7),
+        4: calcular_area_do_triangulo(5, 4),
+        5: realizar_contagem_progressiva(10),
+        6: apoiar_candidato('Sábado', 10),
+        7: brincar_de_plim(20),
+        8: sair()
+    }
+    return opcao.get(argumento, 'Opção Inválida')
+
+
 #Estrutura de identificação / execução do script
 if __name__ == '__main__':
-    print_hi('Michele')
+    continua = True
+
+    #while continua:
+    print('####################################')
+    print('#                                  #')
+    print('#         MENU DE OPÇÔES           #')
+    print('#                                  #')
+    print('#   1 - Olá Mundo                  #')
+    print('#   2 - Area do Retângulo          #')
+    print('#   3 - Area do Quadrado           #')
+    print('#   4 - Area do Triângulo          #')
+    print('#   5 - Contagem Progressiva       #')
+    print('#   6 - Apoiar Candidato           #')
+    print('#   7 - Brincar de Plim            #')
+    print('#                                  #')
+    print('#   Z - Sair                       #')
+    print('#                                  #')
+    print('####################################')
 
 
-    #chamar a função de cálculo da área do retângulo
-    resultado = calcular_area_do_retangulo(4,3)
-    print(f'A área do retângulo é de {resultado} m2')
-
-
-    #chamar a função de cálculo da área do quadrado
-    resultado = calcular_area_do_quadrado(5)
-    print(f'A área do quadrado é de {resultado} m2')
-
-
-    #chamar a função de cálculo da área do triângulo
-    resultado = calcular_area_do_triangulo(7,4)
-    print(f'A área do triângulo é de {resultado} m2')
-
-
-    #executar uma contagem progressiva
-    realizar_contagem_progressiva(11)
-
-
-    #exibir o nome do candidato várias vezes
-    apoiar_candidato('Candidato', 100)
-
-
-    #brincar de plim
-    brincar_de_plim(100)
+    escolha = input('Escolha sua opção:')
+    print(f'A sua escolha foi: {escolha}')
