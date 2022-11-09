@@ -94,7 +94,8 @@ def exibir_dia_da_semana_if(numero):
 def brincar_de_para_ou_continua():
     resposta = 'C' # continua
 
-    while resposta == 'C' or resposta == 'c':
+    #while resposta == 'C' or resposta == 'c':
+    while resposta.upper() == 'C':
         resposta = input('Digite C para continuar ou qualquer outro caracter para parar')
 
     print('Você decidiu parar com a brincadeira')

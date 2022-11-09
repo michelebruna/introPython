@@ -48,7 +48,7 @@ def sair():
     print('Obrigada e Volte Sempre')
 
 
-def exibir_menu(escolha):
+def exibir_menu(resposta):
     opcao = {
         1: print_hi('Michele'),
         2: calcular_area_do_retangulo(8, 9),
@@ -64,26 +64,55 @@ def exibir_menu(escolha):
 
 #Estrutura de identificação / execução do script
 if __name__ == '__main__':
-    continua = True
 
-    #while continua:
-    print('####################################')
-    print('#                                  #')
-    print('#         MENU DE OPÇÔES           #')
-    print('#                                  #')
-    print('#   1 - Olá Mundo                  #')
-    print('#   2 - Area do Retângulo          #')
-    print('#   3 - Area do Quadrado           #')
-    print('#   4 - Area do Triângulo          #')
-    print('#   5 - Contagem Progressiva       #')
-    print('#   6 - Apoiar Candidato           #')
-    print('#   7 - Brincar de Plim            #')
-    print('#                                  #')
-    print('#   Z - Sair                       #')
-    print('#                                  #')
-    print('####################################')
+    resposta = 'C'
+
+    while resposta.upper() != 'Z':
+
+        #while continua:
+        print('####################################')
+        print('#                                  #')
+        print('#         MENU DE OPÇÔES           #')
+        print('#                                  #')
+        print('#   1 - Olá Mundo                  #')
+        print('#   2 - Area do Retângulo          #')
+        print('#   3 - Area do Quadrado           #')
+        print('#   4 - Area do Triângulo          #')
+        print('#   5 - Contagem Progressiva       #')
+        print('#   6 - Apoiar Candidato           #')
+        print('#   7 - Brincar de Plim            #')
+        print('#                                  #')
+        print('#   Z - Sair                       #')
+        print('#                                  #')
+        print('####################################')
 
 
-    escolha = input('Escolha sua opção:')
-    print(f'A sua escolha foi: {escolha}')
-    exibir_menu(escolha)
+        resposta = input('Escolha sua opção:')
+        print(f'A sua escolha foi: {resposta}')
+        #exibir_menu(escolha)
+
+        if resposta.upper() != 'Z':
+            if resposta == '1':
+                print_hi('Michele')
+            elif resposta == '2':
+                resultado = calcular_area_do_retangulo(8,7)
+                print(f'A área do retângulo é de {resultado} m2')
+                calcular_area_do_retangulo(8,7)
+            elif resposta == '3':
+                resultado = calcular_area_do_quadrado(6)
+                print(f'A área do quadro é de {resultado} m2')
+                calcular_area_do_quadrado(6)
+            elif resposta == '4':
+                resultado = calcular_area_do_triangulo(5,4)
+                print(f'A área do triângulo é de {resultado} m3')
+                calcular_area_do_triangulo(5,4)
+            elif resposta == '5':
+                realizar_contagem_progressiva(10)
+            elif resposta == '6':
+                apoiar_candidato('Murphy', 13)
+            elif resposta == '7':
+                brincar_de_plim(7)
+            else:
+                print('Voc~e digitou uma opção inválida. Escolha uma opção de 1 a 7')
+        else:
+            print('Você escolheu sair. Obrigada!')
