@@ -48,7 +48,7 @@ def sair():
     print('Obrigada e Volte Sempre')
 
 
-def exibir_menu(argumento):
+def exibir_menu(escolha):
     opcao = {
         1: print_hi('Michele'),
         2: calcular_area_do_retangulo(8, 9),
@@ -59,7 +59,7 @@ def exibir_menu(argumento):
         7: brincar_de_plim(20),
         8: sair()
     }
-    return opcao.get(argumento, 'Opção Inválida')
+    return opcao.get(escolha, 'Opção Inválida')
 
 
 #Estrutura de identificação / execução do script
@@ -86,3 +86,4 @@ if __name__ == '__main__':
 
     escolha = input('Escolha sua opção:')
     print(f'A sua escolha foi: {escolha}')
+    exibir_menu(escolha)

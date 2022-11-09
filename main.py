@@ -5,6 +5,8 @@
 # 3 - Métodos e funções (executam alguma ação. Se só faz e fica quietinho, é um método. Se tem retorno, é uma função)
 # def (definition ou definição é um método ou função, não distingue os dois)
 
+# ''' - 3 aspas simples faz comentário em bloco
+
 def print_hi(name):
     print(f'Hi, {name}') # f'' significa format, ele entende que o que está entre chaves é uma variável. Observado na
   #  versão 3 do Python para frente
@@ -43,6 +45,61 @@ def brincar_de_plim(fim):
         else:
             print('{:0>3}'.format(numero))
 
+def exibir_dia_da_semana_if(numero):
+    if numero == 1:
+        print('O dia é Segunda')
+    if numero == 2:
+        print('O dia é Terça')
+    if numero == 3:
+        print('O dia é Quarta')
+    if numero == 4:
+        print('O dia é Quinta')
+    if numero == 5:
+        print('O dia é Sexta')
+    if numero == 6:
+        print('O dia é Sábado')
+    if numero == 6:
+        print('O dia é Domingo')
+    else:
+        print('Número de dia inválido. Digite um número de 1 a 7')
+
+
+'''def exibir_dia_da_semana_match(numero):
+    match numero:
+        case 1:
+            print('O dia é Segunda')
+            exit()
+        case 2:
+            print('O dia é Terça')
+            exit()
+        case 3:
+            print('O dia é Quarta')
+            exit()
+        case 4:
+            print('O dia é Quinta')
+            exit()
+        case 5:
+            print('O dia é Sexta')
+            exit()
+        case 6:
+            print('O dia é Sábado')
+            exit()
+        case 7:
+            print('O dia é Domingo')
+            exit()
+        case _:
+            print('Número de dia inválido. Digite um número de 1 a 7') '''
+
+
+def brincar_de_para_ou_continua():
+    resposta = 'C' # continua
+
+    while resposta == 'C' or resposta == 'c':
+        resposta = input('Digite C para continuar ou qualquer outro caracter para parar')
+
+    print('Você decidiu parar com a brincadeira')
+
+
 #Estrutura de identificação / execução do script
 if __name__ == '__main__':
     print_hi('Michele')
@@ -73,3 +130,13 @@ if __name__ == '__main__':
 
     #brincar de plim
     brincar_de_plim(100)
+
+
+    #exemplo de dia da semana com if, elif e else
+    exibir_dia_da_semana_if(0)
+
+    '''  # exenplo de dia da semana com match case
+    exibir_dia_da_semana_match(1) '''
+
+    # exemplo com while (para ou continua)
+    brincar_de_para_ou_continua()
