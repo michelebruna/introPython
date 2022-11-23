@@ -1,0 +1,22 @@
+{
+    "cliente": [
+        {
+            "email": "michele@iterasys.com.br",
+            "nome": "Michele",
+            "telefone": "37999999999"
+        },
+        {
+            "email": "ana@iterasys.com.br",
+            "nome": "Ana",
+            "telefone": "31999999999"
+        },
+        [
+            "{'nome':'Arthur','telefone':'37999998888','email':'arthur@iterasys.com.br'}",
+            "{'nome':'Filipe','telefone':'31999999999','email':'filipe@iterasys.com.br'}"
+        ],
+        [
+            "{'nome':'Arthur','telefone':'37999998888','email':'arthur@iterasys.com.br'}",
+            "{'nome':'Filipe','telefone':'31999999999','email':'filipe@iterasys.com.br'}"
+        ]
+    ]
+}
